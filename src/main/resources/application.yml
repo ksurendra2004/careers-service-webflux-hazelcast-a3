@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+spring:
+  data:
+    cassandra:
+      keyspace-name: empkeyspace
+      username: <astradb_username>
+      password: <astradb_password>
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+datastax.astra:
+  secure-connect-bundle: <secure-connect-<employeedb>.zip> # Also, download it from astradb cloud and add it under resources.
+
+astra.db:
+  id: <astradb_id>
+  region: <your nearest region>
+  keyspace: empkeyspace
+  application.token: <astradb_token>
